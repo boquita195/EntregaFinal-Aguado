@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    background-color: rgba(30, 82, 90, 150);
+    font-size: 50px;
+    float: left;
+    margin-left: 5px;
+}
+h1 a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.nav ul{
+   list-style: none;
+   text-align: center;
+   background-color: rgba(30, 82, 90, 150);
+   padding: 0;
+   margin: 0;
+}
+.nav li{  
+  display: inline-block;
+  margin: 20px;
+  font-size: 35px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.nav a{
+    color: white;
+    text-decoration: none;
+}
+.cart{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.item-list-container {
+     text-align: center;
+      color: blue;
+      font-size: 36px;
+    
+  }
