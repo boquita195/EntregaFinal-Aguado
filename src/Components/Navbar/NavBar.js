@@ -1,5 +1,5 @@
 import React from 'react'
-import CartWidget from './CartWidget'
+import CartWidget from '../Cartwidget/CartWidget'
 import './navbar.css'
 
 
@@ -14,7 +14,9 @@ const NavBar = () => {
       <li><a href='/'>Remeras</a></li>
       </ul>
       </div> 
+     <div>
       <CartWidget />
+     </div>
     </div>
   )
 }

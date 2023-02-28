@@ -9,11 +9,6 @@ const Item = () => {
       price: 100,
    }];
   
-  
-
-
-
-
   return (
     <div className='row'>
     
