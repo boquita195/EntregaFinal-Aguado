@@ -1,6 +1,6 @@
 import React from 'react'
 import cart from '../assets/img/cart.png'
-import './navbar.css'
+import './cartwidget.css'
 
 function CartWidget(){
 

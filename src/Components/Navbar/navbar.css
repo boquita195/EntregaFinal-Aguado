@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -31,14 +32,4 @@ h1 a{
     color: white;
     text-decoration: none;
 }
-.cart{
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-h2{
-     text-align: center;
-      color: blue;
-      font-size: 36px;
-    
-  } 
+
