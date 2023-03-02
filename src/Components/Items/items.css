@@ -1,6 +1,10 @@
-h2{
+h3{
     text-align: center;
      color: blue;
      font-size: 36px;
-   
- } 
+} 
+
+.zapatillas{
+    display: flex;
+    color: blue;
+}

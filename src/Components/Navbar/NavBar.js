@@ -9,9 +9,9 @@ const NavBar = () => {
     <h1><a href='/'> Valhalla</a></h1>
      <div class="nav" role={'navigation'}>
       <ul>
-      <li><a href='/'>Zapatillas</a></li>
-      <li><a href='/'>Buzos</a></li>
-      <li><a href='/'>Remeras</a></li>
+      <li><a href='/'>Inicio</a></li>
+      <li><a href='/'>Productos</a></li>
+      <li><a href='/'>Contacto</a></li>
       </ul>
       </div> 
      <div>

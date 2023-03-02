@@ -1,19 +1,13 @@
-import React from 'react'
-import './items.css'
+import React from 'react';
+import './items.css';
 
-const Item = () => {
-  
-    let producto = [{
-      id: 1,
-      name: 'BullsOG',
-      price: 100,
-   }];
-  
+const Item = ({ producto }) => {
   return (
-    <div className='row'>
-    
+    <div>
+      <h3>{producto.nombre}</h3>
+      <p>Precio: ${producto.precio}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Item
+export default Item;
