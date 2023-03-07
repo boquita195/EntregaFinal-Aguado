@@ -1,36 +1,38 @@
-import "./styles.scss";
+import "./items.css";
 import { useState, useEffect } from "react";
-import products from "../../products/products";
+import productos from "../../Productos/Products";
 import { useParams } from "react-router-dom";
 
-function ItemDetailContainer({ greeting }) {
+function getSingleItemFromDataBase(idItem) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      let encontrado = productos.find((item) => item.id === Number(idItem));
+      resolve(encontrado);
+    }, 2000);
+  });
+}
+
+function ItemDetailContainer() {
   const [productos, setProductos] = useState({});
 
   const params = useParams();
   const idUser = params.idUser;
 
   useEffect(() => {
-    const promesaItem = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        let encontrado = products.find((item) => item.id === Number(idUser));
-        resolve(encontrado);
-      }, 2000);
+    getSingleItemFromDataBase(idUser).then((respuesta) => {
+      setProductos(respuesta);
     });
-
-    promesaItem.then((respuesta) => setProductos(respuesta));
-  }, []);
+  }, [idUser]);
 
   return (
     <>
       <div className="item-list-container">
-        <h2>{greeting}</h2>
-
         <ul className="item-list">
           <li className="item-card" key={productos.id}>
-            <img src={productos.avatar} alt={productos.name} />
-            <h4>{`${productos.name} ${productos.description}`}</h4>
-            <small>{productos.category}</small>
-            <p>$5000</p>
+            <img src={process.env.PUBLIC_URL + 'BullsOG'} alt={"Zapatillas BullsOG"} />
+            <h4>{`${productos.nombre} ${productos.description}`}</h4>
+            <small>{productos.categoria}</small>
+            <p>{`$${productos.precio}`}</p>
             <button>Agregar al carrito</button>
           </li>
         </ul>

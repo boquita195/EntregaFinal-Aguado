@@ -1,7 +1,7 @@
 const productos = [{
     id: 1, 
     nombre: 'BullsOG', 
-    precio: 250
+    precio: 250,
 },
 {   id: 2, 
     nombre: 'Lakers', 
@@ -12,4 +12,4 @@ const productos = [{
 
 
 
-    export default productos;
+ export default productos;
