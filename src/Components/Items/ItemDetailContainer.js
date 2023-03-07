@@ -29,7 +29,7 @@ function ItemDetailContainer() {
       <div className="item-list-container">
         <ul className="item-list">
           <li className="item-card" key={productos.id}>
-            <img src={process.env.PUBLIC_URL + 'BullsOG'} alt={"Zapatillas BullsOG"} />
+            <img src={productos.avatar} alt={productos.nombre} />
             <h4>{`${productos.nombre} ${productos.description}`}</h4>
             <small>{productos.categoria}</small>
             <p>{`$${productos.precio}`}</p>
