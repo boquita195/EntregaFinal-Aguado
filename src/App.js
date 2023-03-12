@@ -14,16 +14,13 @@ function App() {
         <NavBar />
 
         <Routes> 
-          <Route
-            path="/"
-            element={<ItemListContainer greeting={"Bienvenidos"} />}
-          />
-          {/* URL segments */}
-          <Route path="/detalle/:idUser" element={<ItemDetailContainer />} />
-          <Route
-            path="/category/:idCategory"
-            element={<ItemListContainer greeting={"Bienvenidos"} />}
-          />
+        <Route path="/" element={<ItemListContainer greeting={"Bienvenidos"} />}/>
+         
+        <Route path='/categoria/:idCategoria' element={<ItemListContainer />}/>
+
+
+        <Route path='/item/:id' element={<ItemDetailContainer />}/>
+
  
        </Routes>
       </BrowserRouter>

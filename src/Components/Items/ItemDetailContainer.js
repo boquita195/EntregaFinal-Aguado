@@ -30,7 +30,7 @@ function ItemDetailContainer() {
         <ul className="item-list">
           <li className="item-card" key={productos.id}>
             <img src={productos.avatar} alt={productos.nombre} />
-            <h4>{`${productos.nombre} ${productos.description}`}</h4>
+            <h4>{`${productos.nombre} ${productos.detalle}`}</h4>
             <small>{productos.categoria}</small>
             <p>{`$${productos.precio}`}</p>
             <button>Agregar al carrito</button>
