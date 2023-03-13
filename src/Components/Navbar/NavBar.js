@@ -17,13 +17,13 @@ function NavBar() {
             <Link to="/">Inicio</Link>
           </li>
           <li>
-            <Link to="/Categoria/Botitas">Productos</Link>
+            <Link to="/Categoria/Zapatillas">Zapatillas</Link>
           </li>
-          <li>
-          <Link to="/Contacto">Contacto</Link>
-          </li>
-        </ul>
-      </div>
+         <li>
+            <Link to="/Categoria/Camisetas"> Camisetas </Link> 
+         </li> 
+          </ul> 
+      </div>  
       <div className="right">
         <CartWidget />
       </div>
