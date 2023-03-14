@@ -17,10 +17,10 @@ function NavBar() {
             <Link to="/">Inicio</Link>
           </li>
           <li>
-            <Link to="/Categoria/Zapatillas">Zapatillas</Link>
+            <Link to="/categoria/Zapatillas">Zapatillas</Link>
           </li>
          <li>
-            <Link to="/Categoria/Camisetas"> Camisetas </Link> 
+            <Link to="/categoria/Camisetas"> Camisetas </Link> 
          </li> 
           </ul> 
       </div>  

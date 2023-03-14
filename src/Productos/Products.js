@@ -2,7 +2,7 @@ const productos = [{
     id: 1, 
     nombre: 'BullsOG', 
     precio: 250,
-    avatar: 'BullsOG.jpg',
+    avatar: '/img/BullsOG.jpg',
     detalle: 'Las que empezaron todo.',
     categoria: 'Zapatillas'
 },
@@ -15,7 +15,7 @@ const productos = [{
 {   id: 3, 
     nombre: 'Camiseta de Boca', 
     precio: 100,
-    avatar: 'Boca.jpg',
+    avatar: '/img/Boca.jpg',
     detalle: 'La camiseta del mas grande de Argentina.',
     categoria: 'Camisetas'  },];    
 
