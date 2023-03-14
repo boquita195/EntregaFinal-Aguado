@@ -7,11 +7,12 @@ import './items.css';
 function getItemsFromDataBase(categoria) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      const productosFiltrados = productos.filter((Productos) => productos.categoria === categoria);
+      const productosFiltrados = productos.filter((producto) => producto.categoria === categoria);
       resolve(productosFiltrados);
     }, 2000);
   });
 }
+
 
   const ItemListContainer = ({greeting}) => {
   const [productos, setProductos] = useState([]);
@@ -31,11 +32,6 @@ function getItemsFromDataBase(categoria) {
     </div>
   );
 };
-
-
-
-
-
 
 
 export default ItemListContainer;
