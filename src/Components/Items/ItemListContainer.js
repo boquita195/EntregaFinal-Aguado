@@ -8,35 +8,40 @@ function getItemsFromDataBase() {
   return new Promise((resolve, reject) => {
     let error = false;
     setTimeout(() => {
-      if(error === true) reject ("Error leyendo los datos"); 
+      if (error === true) reject("Error leyendo los datos");
       resolve(productos);
     }, 2000);
   });
 }
+
 function getItemsByCategoriaFromDataBase(categoriaURL) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-    let productosFiltered = productos.filter(item => item.categoria === categoriaURL)
-     resolve(productosFiltered);
+      let productosFiltered = productos.filter(item => item.categoria === categoriaURL)
+      resolve(productosFiltered);
     }, 2000);
   });
 }
-   const ItemListContainer = ({greeting}) => {
-   const [productos, setProductos, undefinded] = useState([]);
-   const params = useParams();
-   const idCategoria = params.idCategoria;  
-async function leerDatos(){
-  if(idCategoria === undefinded){
-    let respuesta = await getItemsFromDataBase();
-    setProductos(respuesta);
+
+const ItemListContainer = ({ greeting }) => {
+  const [productos, setProductos] = useState([]);
+  const params = useParams();
+  const idCategoria = params.idCategoria;
+
+  async function leerDatos() {
+    if (idCategoria) {
+      let respuesta = await getItemsByCategoriaFromDataBase(idCategoria);
+      setProductos(respuesta);
+    } else {
+      let respuesta = await getItemsFromDataBase();
+      setProductos(respuesta);
+    }
   }
-  else{
-   let respuesta = getItemsByCategoriaFromDataBase(idCategoria);
-   setProductos(respuesta);
-  }
-}
-useEffect(() => {leerDatos();}, [idCategoria]);
-   
+
+  useEffect(() => {
+    leerDatos();
+  }, [idCategoria]);
+
   return (
     <div className='zapatillas'>
       <h2>{greeting}</h2>
@@ -44,6 +49,5 @@ useEffect(() => {leerDatos();}, [idCategoria]);
     </div>
   );
 };
-
 
 export default ItemListContainer;
