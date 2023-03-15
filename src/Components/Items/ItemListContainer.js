@@ -4,27 +4,39 @@ import ItemList from './ItemList';
 import './items.css';
 import { useParams } from 'react-router-dom';
 
-function getItemsFromDataBase(categoria) {
+function getItemsFromDataBase() {
   return new Promise((resolve, reject) => {
+    let error = false;
     setTimeout(() => {
-      const productosFiltrados = productos.filter((producto) => producto.categoria === categoria);
-      resolve(productosFiltrados);
+      if(error === true) reject ("Error leyendo los datos"); 
+      resolve(productos);
     }, 2000);
   });
 }
-
-
-const ItemListContainer = ({greeting}) => {
-  const [productos, setProductos] = useState([]);
-  const { categoria } = useParams(); // Obtener el valor actual del parámetro de la URL
-  
-  useEffect(() => {
-    let PromiseData = getItemsFromDataBase(categoria);
-    PromiseData.then((respuesta) => {
-      setProductos(respuesta);
-    }).catch((error) => alert(error));
-  }, [categoria]);
-
+function getItemsByCategoriaFromDataBase(categoriaURL) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+    let productosFiltered = productos.filter(item => item.categoria === categoriaURL)
+     resolve(productosFiltered);
+    }, 2000);
+  });
+}
+   const ItemListContainer = ({greeting}) => {
+   const [productos, setProductos, undefinded] = useState([]);
+   const params = useParams();
+   const idCategoria = params.idCategoria;  
+async function leerDatos(){
+  if(idCategoria === undefinded){
+    let respuesta = await getItemsFromDataBase();
+    setProductos(respuesta);
+  }
+  else{
+   let respuesta = getItemsByCategoriaFromDataBase(idCategoria);
+   setProductos(respuesta);
+  }
+}
+useEffect(() => {leerDatos();}, [idCategoria]);
+   
   return (
     <div className='zapatillas'>
       <h2>{greeting}</h2>
