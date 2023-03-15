@@ -3,6 +3,7 @@ import ItemListContainer from './Components/Items/ItemListContainer';
 import NavBar from './Components/Navbar/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ItemDetailContainer from './Components/Items/ItemDetailContainer';
+import Button from './Components/Button';
 
 
 
@@ -12,6 +13,9 @@ function App() {
     <div className="container">
       <BrowserRouter>
         <NavBar />
+        <Button onClick = {()=> {alert("clickeaste!");}}>Ver detalles</Button>
+      
+
 
         <Routes> 
         <Route path='/Categoria/:idCategoria' element={<ItemListContainer />}/>

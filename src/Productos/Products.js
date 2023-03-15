@@ -5,7 +5,8 @@ const productos = [
       precio: 250,
       avatar: '/img/BullsOG.jpg',
       detalle: 'Las que empezaron todo.',
-      categoria: 'Zapatillas'
+      categoria: 'Zapatillas',
+      stock: 5,
     },
     {
       id: 2, 
@@ -13,7 +14,8 @@ const productos = [
       precio: 200,
       avatar: '/img/Lakers.jpg',
       detalle: 'Colaboracion con equipos de la NBA.',
-      categoria: 'Zapatillas'
+      categoria: 'Zapatillas',
+      stock: 10,
     },
     {
       id: 3, 
@@ -21,7 +23,8 @@ const productos = [
       precio: 100,
       avatar: '/img/Boca.jpg',
       detalle: 'La camiseta del mas grande de Argentina.',
-      categoria: 'Camisetas'
+      categoria: 'Camisetas',
+      stock: 8,
     },]
  
 

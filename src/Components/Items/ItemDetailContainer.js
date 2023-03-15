@@ -2,6 +2,9 @@ import "./items.css";
 import { useState, useEffect } from "react";
 import productos from "../../Productos/Products";
 import { useParams } from "react-router-dom";
+import Button from "../Button";
+import ItemCount from "./ItemCount";
+
 
 function getSingleItemFromDataBase(idItem) {
   return new Promise((resolve, reject) => {
@@ -33,7 +36,8 @@ function ItemDetailContainer() {
             <h4>{`${productos.nombre} ${productos.detalle}`}</h4>
             <small>{productos.categoria}</small>
             <p>{`$${productos.precio}`}</p>
-            <button>Agregar al carrito</button>
+            <Button onClick = {()=> {alert("Agregaste al carrito!");}}>Ver detalles</Button>
+            <ItemCount initial={1}  stock={productos.stock}/>
           </li>
         </ul>
       </div>
