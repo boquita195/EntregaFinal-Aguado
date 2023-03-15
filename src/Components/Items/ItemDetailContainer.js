@@ -27,6 +27,10 @@ function ItemDetailContainer() {
     });
   }, [idUser]);
 
+  function onAddToCart(count){
+    alert('Agregaste dos productos al carrito.');
+  }
+
   return (
     <>
       <div className="item-list-container">
@@ -36,9 +40,12 @@ function ItemDetailContainer() {
             <h4>{`${productos.nombre} ${productos.detalle}`}</h4>
             <small>{productos.categoria}</small>
             <p>{`$${productos.precio}`}</p>
-            <Button onClick = {()=> {alert("Agregaste al carrito!");}}>Ver detalles</Button>
-            <ItemCount initial={1}  stock={productos.stock}/>
-          </li>
+            <Button onClick = {()=> {alert("Agregaste al carrito!");}}>Agregar al carrito</Button>
+            <ItemCount 
+            onAddToCart={onAddToCart}
+            initial={1}  
+            stock={productos.stock} />
+          </li> 
         </ul>
       </div>
     </>

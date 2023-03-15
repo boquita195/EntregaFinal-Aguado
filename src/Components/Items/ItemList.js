@@ -16,7 +16,7 @@ const ItemList = ({ productos }) => {
             <li key={producto.id}>
               <Item producto={producto} />
               <Link to={`/detalle/${producto.id}`}>
-                <button>Ver más</button>
+                <button>Ver detalles</button>
               </Link>
             </li>
           ))}
