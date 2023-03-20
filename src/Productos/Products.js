@@ -25,7 +25,13 @@ const productos = [
       detalle: 'La camiseta del mas grande de Argentina.',
       categoria: 'Camisetas',
       stock: 8,
-    },]
+    },
+    {id: 4,
+      nombre: 'Camiseta de Argentina',
+      precio: 110,
+      avatar: '/img/Argentina.jpg',
+      categoria: 'Camisetas',
+      stock: 3},]
  
 
  export default productos;

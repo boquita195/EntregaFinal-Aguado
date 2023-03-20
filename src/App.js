@@ -3,7 +3,8 @@ import ItemListContainer from './Components/Items/ItemListContainer';
 import NavBar from './Components/Navbar/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ItemDetailContainer from './Components/Items/ItemDetailContainer';
-import Button from './Components/Button';
+import cartContext, { CartContextProvider } from './Context/CartContext';
+
 
 
 
@@ -11,12 +12,9 @@ import Button from './Components/Button';
 function App() {
   return (
     <div className="container">
+      <CartContextProvider>
       <BrowserRouter>
         <NavBar />
-        <Button onClick = {()=> {alert("clickeaste!");}}>Ver detalles</Button>
-      
-
-
         <Routes> 
         <Route path='/Categoria/:idCategoria' element={<ItemListContainer />}/>
         <Route path='/Detalle/:idUser' element={<ItemDetailContainer />}/>
@@ -24,7 +22,7 @@ function App() {
  
        </Routes>
       </BrowserRouter>
-     
+      </CartContextProvider>
     </div>
   );
 }

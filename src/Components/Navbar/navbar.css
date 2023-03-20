@@ -59,8 +59,10 @@
     outline: none;
     box-shadow: 0 0 3px #666;
   }
-
-  
+ h1{
+  background-color: #f1f1f1;
+  text-align: center;
+ }
   
   
   

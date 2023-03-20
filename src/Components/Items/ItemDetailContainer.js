@@ -1,9 +1,9 @@
 import "./items.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import productos from "../../Productos/Products";
 import { useParams } from "react-router-dom";
-import Button from "../Button";
 import ItemCount from "./ItemCount";
+import cartContext from "../../Context/CartContext";
 
 
 function getSingleItemFromDataBase(idItem) {
@@ -17,6 +17,7 @@ function getSingleItemFromDataBase(idItem) {
 
 function ItemDetailContainer() {
   const [productos, setProductos] = useState({});
+  const [cartItems, setCartItems] = useState();
 
   const params = useParams();
   const idUser = params.idUser;
@@ -27,9 +28,12 @@ function ItemDetailContainer() {
     });
   }, [idUser]);
 
-  function onAddToCart(count){
-    alert('Agregaste dos productos al carrito.');
-  }
+  const {addItem} = useContext(cartContext);
+
+ function onAddToCart(count){
+  alert('Agregaste ${count} al carrito');
+  addItem(productos, count)
+ }
 
   return (
     <>
@@ -40,10 +44,10 @@ function ItemDetailContainer() {
             <h4>{`${productos.nombre} ${productos.detalle}`}</h4>
             <small>{productos.categoria}</small>
             <p>{`$${productos.precio}`}</p>
-            <Button onClick = {()=> {alert("Agregaste al carrito!");}}>Agregar al carrito</Button>
+           
             <ItemCount 
             onAddToCart={onAddToCart}
-            initial={1}  
+            initial={0}  
             stock={productos.stock} />
           </li> 
         </ul>
