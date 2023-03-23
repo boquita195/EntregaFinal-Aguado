@@ -16,6 +16,7 @@ const productos = [
       detalle: 'Colaboracion con equipos de la NBA.',
       categoria: 'Zapatillas',
       stock: 10,
+      oferta: 5 ,
     },
     {
       id: 3, 
@@ -25,11 +26,13 @@ const productos = [
       detalle: 'La camiseta del mas grande de Argentina.',
       categoria: 'Camisetas',
       stock: 8,
+      oferta: 20,
     },
     {id: 4,
       nombre: 'Camiseta de Argentina',
       precio: 110,
       avatar: '/img/Argentina.jpg',
+      detalle: 'La camiseta del campeon del mundo',
       categoria: 'Camisetas',
       stock: 3},]
  
