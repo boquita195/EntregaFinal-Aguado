@@ -25,17 +25,17 @@ function CartContainer() {
           </tr>
         </thead>
         <tbody>
-          {cart.map((user) => {
+          {cart.map((productos) => {
             return (
-              <tr key={user.id} className="cartList_row">
+              <tr key={productos.id} className="cartList_row">
                 <td>
-                  <img height={50} src={user.avatar} alt={user.first_name} />
+                  <img height={50} src={productos.avatar} alt={productos.first_name} />
                 </td>
-                <td>{user.first_name}</td>
-                <td>$ {user.price}</td>
-                <td>{user.count}</td>                
+                <td>{productos.nombre}</td>
+                <td>$ {productos.precio}</td>
+                <td>{productos.count}</td>                
                 <td>
-                  <button color="#c63224">X</button>
+                  <button>X</button>
                 </td>
                 <th>$ --,--</th>
               </tr>
