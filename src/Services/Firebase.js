@@ -6,9 +6,8 @@ import {
   collection,
   writeBatch,
 } from "firebase/firestore";
-import products from "../products/products";
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+/* import products from "../products/products";
+ */import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAAN0MjZ7dvX2MhXSXq9HKNUesXIjzOR9Q",
@@ -25,7 +24,7 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const db = getFirestore(app);
 
-export async function createOrder(orderData) {
+async function createOrder(orderData) {
   const collectionRef = collection(db, "orders");
 
   console.log(orderData);
@@ -45,7 +44,7 @@ export async function exportData() {
     }
   }
   
-  export async function exportDataWithBatch() {
+  async function exportDataWithBatch() {
     const batch = writeBatch(db);
     const collectionRef = collection(db, "products");
   
@@ -57,3 +56,7 @@ export async function exportData() {
     const resp = await batch.commit();
     console.log(resp);
   }
+
+
+  export {createOrder};
+  export {exportDataWithBatch};

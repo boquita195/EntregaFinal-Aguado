@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import productos from "../Productos/Products";
+import { Firestore } from "firebase/firestore";
 
 const cartContext = createContext({cart: []})
 const Provider = cartContext.Provider

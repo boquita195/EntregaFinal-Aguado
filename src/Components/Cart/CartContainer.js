@@ -1,13 +1,13 @@
 import React from "react";
 import { useContext } from "react";
-import cartContext from "../../context/cartContext";
+import  CartContext  from "../../Context/CartContext";
 import Button from "../Button/index";
 import CheckoutCart from "./CheckOutCart";
 import './cartwidget.css';
 
 
 function CartContainer() {
-  const { cart, removeItemFromCart, getPriceInCart } = useContext(cartContext);
+  const { cart, removeItemFromCart, getPriceInCart } = useContext(CartContext);
 
   return (
     <>

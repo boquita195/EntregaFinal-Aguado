@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import {createOrder} from '../../services/firestore';
+import {createOrder} from '../../Services/Firebase';
 import { useNavigate } from 'react-router-dom';
-import './cartwidget.css'
-
+import './cartwidget.css';
+import { Firestore } from 'firebase/firestore';
 
 
 function CheckOutCart({cart, total}){
