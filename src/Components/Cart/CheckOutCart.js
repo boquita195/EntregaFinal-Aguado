@@ -3,6 +3,7 @@ import {createOrder} from '../../Services/Firebase';
 import { useNavigate } from 'react-router-dom';
 import './cartwidget.css';
 import { Firestore } from 'firebase/firestore';
+import CheckOutForm from './CheckOutForm';
 
 
 function CheckOutCart({cart, total}){
@@ -25,6 +26,7 @@ navigateTo('/checkout/${id}')
   return (
     <div>
       <button onClick={handleCheckout}>Terminar Compra</button>
+      <CheckOutForm onSubmit={handleCheckout} />
     </div>
   )
 }

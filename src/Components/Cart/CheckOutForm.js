@@ -60,9 +60,9 @@ function submitData(){
       
      <button disabled={
           !(
-            userData.name !== "" &&
-            userData.phone !== "" &&
-            userData.email !== ""
+            productodata.nombre !== "" &&
+            productodata.telefono !== "" &&
+            productodata.email !== ""
           )
         }
         onClick={submitData}>Crear orden</button>
