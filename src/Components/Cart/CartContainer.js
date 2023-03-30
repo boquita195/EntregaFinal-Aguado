@@ -48,7 +48,7 @@ function CartContainer() {
         <h4>El total de tu compra es de $ --,--</h4>
       </div>
 
-      <CheckoutCart total={getPriceInCart()} cart={cart}/>
+      <CheckoutCart cart={cart}/>
     </>
   );
 }
