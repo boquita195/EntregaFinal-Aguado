@@ -54,10 +54,11 @@ function ItemDetailContainer() {
 
   const {addItem} = useContext(cartContext);
 
- function onAddToCart(count){
-  alert('Agregaste ${count} al carrito');
-  addItem(productos, count)
- }
+  function onAddToCart(count) {
+    alert(`Agregaste ${count} al carrito`);
+    addItem(productos, count);
+  }
+  
 
   return (
     <>
