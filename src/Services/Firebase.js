@@ -6,8 +6,8 @@ import {
   collection,
   writeBatch,
 } from "firebase/firestore";
-/* import products from "../products/products";
- */import { getAnalytics } from "firebase/analytics";
+ import products from "../Productos/Products";
+ import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAAN0MjZ7dvX2MhXSXq9HKNUesXIjzOR9Q",

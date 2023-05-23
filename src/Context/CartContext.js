@@ -7,7 +7,7 @@ const Provider = cartContext.Provider
 function CartContextProvider(props){
  const [cart, setCart] = useState([])
 function addItem(item, count){
-const newCart = [setCart];
+const newCart = [cart];
 productos.count = count;
 newCart.push(productos);
 setCart(newCart);
